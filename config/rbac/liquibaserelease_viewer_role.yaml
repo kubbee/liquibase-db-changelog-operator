@@ -1,0 +1,20 @@
+# permissions for end users to view liquibasereleases.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: liquibaserelease-viewer-role
+rules:
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases/status
+  verbs:
+  - get

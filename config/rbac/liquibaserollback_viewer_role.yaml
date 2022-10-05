@@ -1,0 +1,20 @@
+# permissions for end users to view liquibaserollbacks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: liquibaserollback-viewer-role
+rules:
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks/status
+  verbs:
+  - get

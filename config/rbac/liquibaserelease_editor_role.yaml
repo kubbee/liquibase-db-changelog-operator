@@ -1,0 +1,24 @@
+# permissions for end users to edit liquibasereleases.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: liquibaserelease-editor-role
+rules:
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases/status
+  verbs:
+  - get

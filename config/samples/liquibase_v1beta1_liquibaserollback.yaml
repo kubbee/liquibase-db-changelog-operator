@@ -1,0 +1,6 @@
+apiVersion: liquibase.kubbee.tech/v1beta1
+kind: LiquiBaseRollback
+metadata:
+  name: liquibaserollback-sample
+spec:
+  # TODO(user): Add fields here

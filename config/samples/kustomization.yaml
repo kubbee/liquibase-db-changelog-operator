@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- liquibase_v1beta1_liquibaserelease.yaml
+- liquibase_v1beta1_liquibaserollback.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

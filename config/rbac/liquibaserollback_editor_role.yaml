@@ -1,0 +1,24 @@
+# permissions for end users to edit liquibaserollbacks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: liquibaserollback-editor-role
+rules:
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks/status
+  verbs:
+  - get

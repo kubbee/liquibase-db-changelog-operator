@@ -1,0 +1,59 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibasereleases/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - liquibase.kubbee.tech
+  resources:
+  - liquibaserollbacks/status
+  verbs:
+  - get
+  - patch
+  - update

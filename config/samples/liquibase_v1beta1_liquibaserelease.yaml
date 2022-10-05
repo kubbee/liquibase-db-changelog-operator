@@ -1,0 +1,6 @@
+apiVersion: liquibase.kubbee.tech/v1beta1
+kind: LiquiBaseRelease
+metadata:
+  name: liquibaserelease-sample
+spec:
+  # TODO(user): Add fields here
