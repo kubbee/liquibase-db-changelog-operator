@@ -31,6 +31,8 @@ type LiquiBaseReleaseSpec struct {
 	DBEngine                 string                   `json:"dbEngine,omitempty"`
 	Hash                     string                   `json:"hash,omitempty"`
 	LiquiBaseReleaseResource LiquiBaseReleaseResource `json:"resource,omitempty"`
+	DatabaseAuthorization    DatabaseAuthorization    `json:"databaseAuthorization"`
+	SecretManager            SecretManager            `json:"secretManager"`
 }
 
 // LiquiBaseReleaseResource defines the desired state of LiquidBaseRelease
