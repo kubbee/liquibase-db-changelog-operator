@@ -34,6 +34,11 @@ type LiquiBaseReleaseSpec struct {
 	LiquiBaseReleaseResource LiquiBaseReleaseResource `json:"resource,omitempty"`
 	DatabaseAuthorization    DatabaseAuthorization    `json:"databaseAuthorization"`
 	SecretManager            SecretManager            `json:"secretManager"`
+	LiquiBaseReleaseLogging  LiquiBaseReleaseLogging  `json:"logging,omitempty"`
+}
+
+type LiquiBaseReleaseLogging struct {
+	LogLevel string `json:"loglevel,omitempty"`
 }
 
 // LiquiBaseReleaseResource defines the desired state of LiquidBaseRelease
