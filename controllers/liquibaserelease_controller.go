@@ -84,6 +84,20 @@ func (r *LiquiBaseReleaseReconciler) applyChangelog(ctx context.Context, req ctr
 
 	r.readConfigMap()
 
+	// TODO: se tiver habilitado o secretmanager deve buscas user e senha lá
+
+	// TODO: implamentar qual banco de dado será
+
+	// TODO: criar um aquivo de propriedade
+
+	// TODO: copiar o valor do consifg map e criar no os para executar
+
+	// TODO: chamar o update passando os dados
+
+	// TODO: chamar o tag passando os dados
+
+	// TODO: chamar o processe que salva no s3
+
 	return ctrl.Result{}, nil
 }
 
