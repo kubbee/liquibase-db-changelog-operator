@@ -82,6 +82,8 @@ func (r *LiquiBaseReleaseReconciler) Reconcile(ctx context.Context, req ctrl.Req
 // applyChangelog
 func (r *LiquiBaseReleaseReconciler) applyChangelog(ctx context.Context, req ctrl.Request, liquiBase *liquibasev1beta1.LiquiBaseRelease) (ctrl.Result, error) {
 
+	r.readConfigMap()
+
 	return ctrl.Result{}, nil
 }
 
