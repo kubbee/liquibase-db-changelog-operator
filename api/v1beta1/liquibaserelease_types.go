@@ -30,6 +30,7 @@ type LiquiBaseReleaseSpec struct {
 	SchemaId                 string                   `json:"schemaId,omitempty"`
 	DBEngine                 string                   `json:"dbEngine,omitempty"`
 	Hash                     string                   `json:"hash,omitempty"`
+	Repository               string                   `json:"repository,omitempty"`
 	LiquiBaseReleaseResource LiquiBaseReleaseResource `json:"resource,omitempty"`
 	DatabaseAuthorization    DatabaseAuthorization    `json:"databaseAuthorization"`
 	SecretManager            SecretManager            `json:"secretManager"`
